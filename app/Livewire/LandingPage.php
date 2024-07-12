@@ -2,8 +2,10 @@
 
 namespace App\Livewire;
 
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
+#[Title('SMS | Landing Page')]
 class LandingPage extends Component
 {
     public $count = 1;

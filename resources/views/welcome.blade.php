@@ -8,6 +8,6 @@
 
     </head>
     <body>
-        <livewire:Landing-page />
+        <livewire:classes-management />
     </body>
 </html>

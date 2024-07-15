@@ -2,9 +2,11 @@
 
 namespace App\Livewire;
 
+use Livewire\Attributes\Title;
 use Livewire\Component;
 use App\Models\Classes;
 
+#[Title('SMS | Classes Mangement')]
 class ClassesManagement extends Component
 {
     public $records;
@@ -25,5 +27,8 @@ class ClassesManagement extends Component
     public function render()
     {
         return view('livewire.classes-management');
+        // return view('livewire.classes-management',[
+        //     'records' => Classes::all(),
+        // ]);
     }
 }

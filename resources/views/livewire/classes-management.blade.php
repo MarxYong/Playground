@@ -1,5 +1,16 @@
 <div>
 
+    <form wire:submit="save">
+        <input type="text" wire:model="status">
+        <input type="text" wire:model="class_name">
+        <input type="text" wire:model="class_description">
+        <input type="text" wire:model="class_section">
+        <input type="text" wire:model="class_room">
+        <input type="text" wire:model="class_subject">
+     
+        <button type="submit">Save</button>
+    </form>
+
     <!-- Fetch record by ID -->
     <input type='number' wire:model="id" >
     <input type='button' value='Fetch record by ID' wire:click="fetchbyid" >

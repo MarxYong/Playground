@@ -9,11 +9,11 @@
     <body>
         <nav class="navbar sticky-top bg-body-tertiary">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Student-Management-System</a>
+              <a class="navbar-brand" href="#">Student-Enrolment-System</a>
               <div class="navbar-end">
                 @if (Route::has('login'))
                     @auth
-                        <a href="{{ url('/dashboard') }}">Dashboard</a>
+                        <a href="{{ url('/admin') }}">Dashboard</a>
                     @else
                         <a href="/">Home</a>
                         <a href="/about">About</a>

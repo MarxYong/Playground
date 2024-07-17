@@ -9,22 +9,25 @@
     <body>
         <nav class="navbar sticky-top bg-body-tertiary">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Student-Enrolment-System</a>
-              <div class="navbar-end">
                 @if (Route::has('login'))
                     @auth
-                        <a href="{{ url('/admin') }}">Dashboard</a>
+                        <a class="navbar-brand" href="#">Student-Enrolment-System</a>
+                        <div class="navbar-end">
+                            <a href="{{ url('/admin') }}">Profile</a>
+                        </div>
                     @else
-                        <a href="/">Home</a>
-                        <a href="/about">About</a>
-                        <a href="/contact">Contact</a>
-                        <a href="{{ route('login') }}">Log In</a>
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
+                        <a class="navbar-brand" href="#">SOP</a>
+                        <div class="navbar-end">
+                            <a href="/">Home</a>
+                            <a href="/about">About</a>
+                            <a href="/contact">Contact</a>
+                            <a href="{{ route('login') }}">Log In</a>
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}">Register</a>
+                            @endif
+                        </div>
                     @endauth
                 @endif
-              </div>
             </div>
           </nav>
         {{ $slot }}

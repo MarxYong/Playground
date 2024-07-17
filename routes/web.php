@@ -14,4 +14,4 @@ Route::get('/', ContactPage::class);
 Auth::routes();
 
 Route::get('/admin/dashboard', [HomeController::class, 'index'])->name('home');
-Route::get('/admin', ProfileAdmin::class);
+Route::get('/admin', ProfileAdmin::class)->middleware('auth');

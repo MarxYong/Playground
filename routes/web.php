@@ -1,10 +1,11 @@
 <?php
 
+use App\Livewire\LandingPage;
+use App\Livewire\AboutPage;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', LandingPage::class);
+Route::get('/about', AboutPage::class);
 
 Auth::routes();
 

@@ -7,11 +7,6 @@ use App\Models\User;
 
 class EmployeeAdmin extends Component
 {
-    public function toggleRead($employeeId)
-    {
-        return redirect()->to('/admin/employee/{$employedId}');
-    }
-
     public function delete(User $employeeId) {
         $employeeId-> delete();
     }
@@ -19,7 +14,7 @@ class EmployeeAdmin extends Component
     public function render()
     {
         return view('livewire.admin.employee-admin', [
-            'employees' => User::all(),
+            'employees' => User::all()->except('3'),
         ]);
     }
 }

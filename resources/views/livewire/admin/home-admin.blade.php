@@ -1,6 +1,5 @@
 <div>
     {{-- To attain knowledge, add things every day; To attain wisdom, subtract things every day. --}}
-    Welcome to admin home
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">

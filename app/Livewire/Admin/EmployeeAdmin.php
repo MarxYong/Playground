@@ -7,6 +7,10 @@ use App\Models\User;
 
 class EmployeeAdmin extends Component
 {
+    public function createEmployee() {
+        $this->redirect('/admin/employee/new');
+    }
+    
     public function delete(User $employeeId) {
         $employeeId-> delete();
     }

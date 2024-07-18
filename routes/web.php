@@ -5,9 +5,11 @@ use App\Livewire\AboutPage;
 use App\Livewire\ContactPage;
 use App\Http\Controllers\HomeController;
 use App\Livewire\Admin\EmployeeAdmin;
+use App\Livewire\Admin\EmployeeCreate;
 use App\Livewire\Admin\EmployeeView;
 use App\Livewire\Admin\CourseAdmin;
 use App\Livewire\Admin\OfficeAdmin;
+use App\Livewire\Admin\OfficeCreate;
 use App\Livewire\Admin\ProfileAdmin;
 use Illuminate\Support\Facades\Route;
 
@@ -19,7 +21,9 @@ Auth::routes();
 
 Route::get('/admin/dashboard', [HomeController::class, 'index'])->name('home');
 Route::get('/admin/employee', EmployeeAdmin::class)->middleware('auth');
+Route::get('/admin/employee/new', EmployeeCreate::class)->middleware('auth');
 Route::get('/admin/employee/{id}', EmployeeView::class)->middleware('auth');
 Route::get('/admin/course', CourseAdmin::class)->middleware('auth');
 Route::get('/admin/office', OfficeAdmin::class)->middleware('auth');
+Route::get('/admin/office/new', OfficeCreate::class)->middleware('auth');
 Route::get('/admin', ProfileAdmin::class)->middleware('auth');

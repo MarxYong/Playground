@@ -7,7 +7,7 @@
         </ol>
       </nav></div>
       <div class="form-floating col-md-2">
-      <button class="btn btn-primary">Create Employee</button>
+      <button class="btn btn-primary" wire:click="createEmployee">Create Employee</button>
       </div>
     <table class="table">
         <thead>

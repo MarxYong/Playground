@@ -7,6 +7,7 @@ git clone https://github.com/MarxYong/SMS.git
 ## 🧞 Setting Environment
 
 Renamed .env.example to .env
+Run commands `php artisan migrate` to publishes all schema to the database
 
 ## 🧞 Commands
 

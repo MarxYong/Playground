@@ -10,6 +10,13 @@ class EmployeeAdmin extends Component
     public $name, $email, $password, $job_type, $job_no, $status, $user_id;
     public $isOpen = 0;
 
+    public function view($id){
+        $user = User::find($id);
+        if ($user) {
+            $this->redirect('/admin/employee/'. $id);
+        }
+    }
+
     public function create()
     {
         $this->resetInputFields();

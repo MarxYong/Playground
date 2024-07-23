@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('livewire.admin.home-admin');
+        if(Auth::user()->job_type === 'admin'){
+            return view('livewire.admin.home-admin');
+        } else if (Auth::user()->job_type === 'LEC') {
+            return view('livewire.lecturer.home-lecturer');
+        } else {
+            return view('#');
+        }
     }
 }

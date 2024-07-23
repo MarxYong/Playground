@@ -10,14 +10,31 @@
         <div class="container-fluid">
             @if (Route::has('login'))
                 @auth
-                    <a class="navbar-brand" href="#">Student-Enrolment-System</a>
+                @if (Auth::user()->job_type === 'admin')
+                    <a class="navbar-brand" href="#">Admin Site</a>
                     <div class="navbar-end">
-                        <a href="{{ url('/admin/dashboard') }}">Dashboard</a>
+                        <a href="{{ url('/dashboard') }}">Dashboard</a>
                         <a href="{{ url('/admin/employee') }}">Employees</a>
                         <a href="{{ url('/admin/course') }}">Courses</a>
                         <a href="{{ url('/admin/office') }}">Office Sites</a>
                         <a href="{{ url('/admin') }}">{{ Auth::user()->name }}'s Profile</a>
                     </div>
+                    @elseif (Auth::user()->job_type === 'STA')
+                    <a class="navbar-brand" href="#">Staff Site</a>
+                        <div class="navbar-end">
+                            <a href="{{ url('/staff/dashboard') }}">Dashboard</a>
+                        </div>
+                    @elseif (Auth::user()->job_type === 'LEC')
+                        <a class="navbar-brand" href="#">Lecturer Site</a>
+                        <div class="navbar-end">
+                            <a href="{{ url('/dashboard') }}">Dashboard</a>
+                        </div>
+                    @else
+                        <a class="navbar-brand" href="#">Student Site</a>
+                        <div class="navbar-end">
+                            <a href="{{ url('/student/dashboard') }}">Dashboard</a>
+                        </div>
+                    @endif
                 @else
                     <a class="navbar-brand" href="#">SOP</a>
                     <div class="navbar-end">

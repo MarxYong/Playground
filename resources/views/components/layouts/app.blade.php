@@ -17,7 +17,7 @@
                         <a href="{{ url('/admin/employee') }}">Employees</a>
                         <a href="{{ url('/admin/course') }}">Courses</a>
                         <a href="{{ url('/admin/office') }}">Office Sites</a>
-                        <a href="{{ url('/admin') }}">{{ Auth::user()->name }}'s Profile</a>
+                        <a href="{{ url('/profile') }}">{{ Auth::user()->name }}'s Profile</a>
                     </div>
                     @elseif (Auth::user()->job_type === 'STA')
                     <a class="navbar-brand" href="#">Staff Site</a>

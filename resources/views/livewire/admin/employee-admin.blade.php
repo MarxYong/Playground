@@ -26,7 +26,7 @@
         <tbody>
             @foreach ($employees as $user)
             <tr>
-                <td>{{ $user-> status }}</td>
+                <td><div class="badge rounded-pill bg-warning">{{ $user-> status }}</div></td>
                 <td>{{ $user-> job_no }}</td>
                 <td>{{ $user-> name }}</td>
                 <td>{{ $user-> job_type }}</td>

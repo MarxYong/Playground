@@ -1,6 +1,6 @@
 <div class="w-100 p-3">
     <h1>Your Profile</h1>
-
+    
   <section style="background-color: #9de2ff;">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -14,8 +14,11 @@
                     style="width: 180px; border-radius: 10px;" />
                 </div>
                 <div class="flex-grow-1 ms-3">
-                  <h5 class="mb-1">{{Auth::user()->name}}</h5>
-                  <p class="mb-2 pb-1">@if(Auth::user()->job_no){{Auth::user()->job_no}}@else - @endif</p>
+                  <div class="d-flex pt-1">
+                    <h5 class="mb-1">{{Auth::user()->name}}</h5>
+                    <h2>With title</h2>
+                  </div>
+                    <p class="mb-2 pb-1">@if(Auth::user()->job_no){{Auth::user()->job_no}}@else - @endif</p>
                   <div class="d-flex justify-content-start rounded-3 p-2 mb-2 bg-body-tertiary">
                     <div><p class="small text-muted mb-1">Occupation Role</p>
                          <p class="mb-0">@if(Auth::user()->job_type){{Auth::user()->job_type}}@else - @endif</p>

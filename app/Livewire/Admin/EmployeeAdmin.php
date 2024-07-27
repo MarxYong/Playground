@@ -13,7 +13,7 @@ class EmployeeAdmin extends Component
     public function view($id){
         $user = User::find($id);
         if ($user) {
-            $this->redirect('/admin/employee/'. $id);
+            $this->redirect('/employee/'. $id);
         }
     }
 

@@ -15,9 +15,9 @@
                     <a class="navbar-brand" href="#">Admin Site</a>
                     <div class="navbar-end">
                         <a href="{{ url('/dashboard') }}">Dashboard</a>
-                        <a href="{{ url('/admin/employee') }}">Employees</a>
-                        <a href="{{ url('/admin/course') }}">Courses</a>
-                        <a href="{{ url('/admin/office') }}">Office Sites</a>
+                        <a href="{{ url('/employee') }}">Employees</a>
+                        <a href="{{ url('/course') }}">Courses</a>
+                        <a href="{{ url('/office') }}">Office Sites</a>
                         <a href="{{ url('/profile') }}">{{ Auth::user()->name }}'s Profile</a>
                     </div>
                 @elseif (Auth::user()->job_type === 'STA')

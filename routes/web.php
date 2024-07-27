@@ -5,6 +5,8 @@ use App\Livewire\AboutPage;
 use App\Livewire\ContactPage;
 use App\Livewire\ProfilePage;
 use App\Http\Controllers\HomeController;
+
+use App\Livewire\Admin\HomeAdmin;
 use App\Livewire\Admin\EmployeeAdmin;
 use App\Livewire\Admin\EmployeeCreate;
 use App\Livewire\Admin\EmployeeView;
@@ -24,9 +26,10 @@ Auth::routes();
 Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
 Route::get('/profile', ProfilePage::class)->middleware('auth');
 
-Route::get('/admin/employee', EmployeeAdmin::class)->middleware(['auth', 'admin']);
-Route::get('/admin/employee/new', EmployeeCreate::class)->middleware(['auth', 'admin']);
-Route::get('/admin/employee/{id}', EmployeeView::class)->middleware(['auth', 'admin']);
-Route::get('/admin/course', CourseAdmin::class)->middleware(['auth', 'admin']);
-Route::get('/admin/office', OfficeAdmin::class)->middleware(['auth', 'admin']);
-Route::get('/admin/office/new', OfficeCreate::class)->middleware(['auth', 'admin']);
+Route::get('/admin', HomeAdmin::class)->middleware(['auth', 'admin']);
+Route::get('/employee', EmployeeAdmin::class)->middleware(['auth', 'admin']);
+Route::get('/employee/new', EmployeeCreate::class)->middleware(['auth', 'admin']);
+Route::get('/employee/{id}', EmployeeView::class)->middleware(['auth', 'admin']);
+Route::get('/course', CourseAdmin::class)->middleware(['auth', 'admin']);
+Route::get('/office', OfficeAdmin::class)->middleware(['auth', 'admin']);
+Route::get('/office/new', OfficeCreate::class)->middleware(['auth', 'admin']);

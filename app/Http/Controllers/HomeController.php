@@ -29,7 +29,7 @@ class HomeController extends Controller
         } else if (Auth::user()->job_type === 'LEC') {
             return view('livewire.lecturer.home-lecturer');
         } else {
-            return view('#');
+            return view('livewire.student.home-student');
         }
     }
 }

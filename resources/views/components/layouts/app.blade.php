@@ -33,7 +33,10 @@
                 @else
                     <a class="navbar-brand" href="#">Student Site</a>
                     <div class="navbar-end">
-                        <a href="{{ url('/student/dashboard') }}">Dashboard</a>
+                        <a href="{{ url('/dashboard') }}">Dashboard</a>
+                        <a href="{{ url('/class') }}">Class</a>
+                        <a href="{{ url('/bill') }}">Bill</a>
+                        <a href="{{ url('/profile') }}">{{ Auth::user()->name }}'s Profile</a>
                     </div>
                 @endif
             @else
